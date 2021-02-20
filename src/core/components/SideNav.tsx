@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useHeaderContext } from '../context/header';
 import { getRandomColor } from '../utils';
 import './SideNav.scss';
 
@@ -38,6 +39,7 @@ function SideNavItem({
 
 function SideNav() {
   const [selectedItem, setSelectedItem] = useState(1);
+  const headerContext = useHeaderContext();
   const sideNavItems: SideNavItem[] = [
     {
       id: 1,
@@ -57,7 +59,11 @@ function SideNav() {
   ];
 
   return (
-    <section className="side-nav-wrapper">
+    <section
+      className={`side-nav-wrapper ${
+        headerContext.sideNavOpen ? 'open' : 'closed'
+      }`}
+    >
       {sideNavItems.map((item, i) => (
         <SideNavItem
           item={item}

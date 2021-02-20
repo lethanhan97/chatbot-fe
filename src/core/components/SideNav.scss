@@ -4,8 +4,9 @@
   background-color: $side-nav-bg;
   text-align: center;
   color: $side-nav-text;
-  width: 10rem;
   height: 100%;
+  overflow: hidden;
+  transition: width 1s;
 
   .side-nav-item-wrapper {
     padding: 1rem;
@@ -41,4 +42,12 @@
     color: $primary-color;
     font-weight: bold;
   }
+}
+
+.open {
+  width: 10rem;
+}
+
+.closed {
+  width: 0;
 }
