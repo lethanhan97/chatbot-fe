@@ -1,10 +1,11 @@
 import './App.scss';
-import { Header } from './core/components';
+import { Header, SideNav } from './core/components';
 
 function App() {
   return (
     <div>
       <Header />
+      <SideNav />
     </div>
   );
 }
