@@ -1,8 +1,26 @@
 @import '../constants/colors.scss';
 
 .side-nav-wrapper {
-  background-color: $primary-color;
+  background-color: $side-nav-bg;
   text-align: center;
+  color: $side-nav-text;
   width: fit-content;
   height: 100%;
+
+  .side-nav-item-wrapper {
+    padding: 1rem;
+
+    div {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 1.5rem;
+      margin: auto;
+      margin-bottom: 0.5rem;
+
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
