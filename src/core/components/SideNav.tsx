@@ -1,3 +1,5 @@
+import './SideNav.scss';
+
 function SideNav() {
   const sideNavItems: SideNavItem[] = [
     {
@@ -24,7 +26,7 @@ function SideNav() {
   };
 
   return (
-    <section>
+    <section className="side-nav-wrapper">
       {sideNavItems.map((item) => (
         <SideNavItem item={item} />
       ))}
