@@ -4,11 +4,16 @@
   background-color: $side-nav-bg;
   text-align: center;
   color: $side-nav-text;
-  width: fit-content;
+  width: 10rem;
   height: 100%;
 
   .side-nav-item-wrapper {
     padding: 1rem;
+    transition: opacity 0.2s;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
 
     div {
       height: 3rem;
@@ -22,5 +27,18 @@
       justify-content: center;
       align-items: center;
     }
+  }
+
+  .selected-wrapper {
+    border-right: 2px solid $primary-color;
+  }
+
+  .selected-avatar {
+    border: 2px solid $primary-color;
+  }
+
+  .selected-text {
+    color: $primary-color;
+    font-weight: bold;
   }
 }
