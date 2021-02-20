@@ -27,8 +27,8 @@ function SideNav() {
 
   return (
     <section className="side-nav-wrapper">
-      {sideNavItems.map((item) => (
-        <SideNavItem item={item} />
+      {sideNavItems.map((item, i) => (
+        <SideNavItem item={item} key={i} />
       ))}
     </section>
   );

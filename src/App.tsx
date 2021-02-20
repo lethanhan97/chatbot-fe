@@ -3,9 +3,11 @@ import { Header, SideNav } from './core/components';
 
 function App() {
   return (
-    <div>
+    <div className="app-wrapper">
       <Header />
-      <SideNav />
+      <section className="app-body">
+        <SideNav />
+      </section>
     </div>
   );
 }
